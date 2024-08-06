@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card {
+    background: #4a90e2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.location {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.details {
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.details div {
+    flex: 1;
+    text-align: center;
+}
+
+.search-container {
+    text-align: center;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.day {
+    margin-top: 30px;
+}
+
+.day div {
+    margin: 10px;
+    color: #4a90e2;
+    display: flex;
+    justify-content: center;
+}
+
+.day div sub {
+    margin: 5px;
+    color: red;
+}
+
+.minmax {
+    display: flex;
+    justify-content: space-around;
+}
