@@ -19,6 +19,12 @@ function OnClickFatch() {
     fatchData(city)
 }
 
+document.getElementById("submit").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                OnClickFatch(); // Call the search function when Enter is pressed
+            }
+        });
+
 var JSON_value;
 
 
