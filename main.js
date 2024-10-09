@@ -38,11 +38,11 @@ function fatchData(city = 'aurangabad') {
         .then(data => {
             JSON_value = data;
             document.querySelector(".location").innerHTML = (data.location.name)
-            document.querySelector(".temperature").innerHTML = (data.timelines.hourly[hour].values.temperature) + '°C'
+            document.querySelector(".temperature").innerHTML = (data.timelines.hourly[0].values.temperature) + '°C'
             document.querySelector('.min').innerHTML = JSON_value.timelines.daily[0].values.temperatureMin + '°C'
             document.querySelector('.max').innerHTML = JSON_value.timelines.daily[0].values.temperatureMax + '°C'
-            document.querySelector("#humidity").innerHTML = (data.timelines.hourly[hour].values.humidity)
-            document.querySelector('#wind-speed').innerHTML = (data.timelines.hourly[hour].values.windSpeed)
+            document.querySelector("#humidity").innerHTML = (data.timelines.hourly[0].values.humidity)
+            document.querySelector('#wind-speed').innerHTML = (data.timelines.hourly[0].values.windSpeed)
             document.querySelector('#day1').firstElementChild.innerHTML = data.timelines.daily[0].values.temperatureMin + "°C"
             document.querySelector('#day1').lastElementChild.innerHTML = data.timelines.daily[0].values.temperatureMax + "°C"
             document.querySelector('#day2').firstElementChild.innerHTML = data.timelines.daily[1].values.temperatureMin + "°C"
@@ -79,9 +79,9 @@ function ondays(day) {
     document.querySelector('.max').innerHTML = JSON_value.timelines.daily[days[day]].values.temperatureMax + '°C'
     if (day == 'day1') {
         document.querySelector(".day").innerHTML = 'Now'
-        document.querySelector('.temperature').innerHTML = JSON_value.timelines.hourly[hour].values.temperature + '°C'
-        document.querySelector('#humidity').innerHTML = JSON_value.timelines.hourly[hour].values.humidity
-        document.querySelector('#wind-speed').innerHTML = (JSON_value.timelines.hourly[hour].values.windSpeed)
+        document.querySelector('.temperature').innerHTML = JSON_value.timelines.hourly[0].values.temperature + '°C'
+        document.querySelector('#humidity').innerHTML = JSON_value.timelines.hourly[0].values.humidity
+        document.querySelector('#wind-speed').innerHTML = (JSON_value.timelines.hourly[0].values.windSpeed)
     }
     else {
         document.querySelector('.temperature').innerHTML = ""
